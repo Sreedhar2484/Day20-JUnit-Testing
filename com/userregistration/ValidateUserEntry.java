@@ -1,5 +1,5 @@
 package com.userregistration;
-import java.util.Scanner;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -22,7 +22,7 @@ public class ValidateUserEntry{
         return match.matches();
     }
     public static boolean checkEmail(String Email){
-        String email = "^[(.+)@(.+)$";
+        String email = "^[A-Za-z0-9+_.-]+@(.+)$";  
         Pattern pattern2 = Pattern.compile(email);
         if(Email==null)
              return false;
@@ -38,7 +38,10 @@ public class ValidateUserEntry{
         return match.matches();
     }
     public static boolean checkPassword(String Password){
-        String password = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8, 20}$";
+        String password =  "^(?=.*[0-9])"
+        + "(?=.*[a-z])(?=.*[A-Z])"
+        + "(?=.*[@#$%^&+=])"
+        + "(?=\\S+$).{8,20}$";
         Pattern pattern2 = Pattern.compile(password);
         if(Password==null)
              return false;

@@ -28,7 +28,7 @@ public class ValidateUserEntryTest {
     }
     @Test
     public void testValidateUserEntryForPassword(){
-        boolean result = ValidateUserEntry.checkPassword("Pass@123");
+        boolean result = ValidateUserEntry.checkPassword("Naga@por1918");
         Assert.assertEquals(true, result);
     }
 }
